@@ -1,0 +1,15 @@
+package spring_ioc.a;
+
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
+@Component
+//@Scope("prototype")   //create seprate adress
+public class Spotify {
+void play() {
+	System.out.println("haduta iddeee...");
+}
+//public String toString() {
+  //  return "Spotify object is created successfully";
+//}
+}

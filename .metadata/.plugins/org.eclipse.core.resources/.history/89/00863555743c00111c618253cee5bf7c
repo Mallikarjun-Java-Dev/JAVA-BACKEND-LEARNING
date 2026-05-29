@@ -1,0 +1,10 @@
+package springDI;
+
+public class Jio implements Sim {
+
+	@Override
+	public void use() {
+		System.out.println("Jio sim inserted....");
+	}
+
+}

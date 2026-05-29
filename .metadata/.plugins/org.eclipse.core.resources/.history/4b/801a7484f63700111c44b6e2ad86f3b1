@@ -1,0 +1,5 @@
+package manu.controller;
+
+public @interface WebServlet {
+
+}

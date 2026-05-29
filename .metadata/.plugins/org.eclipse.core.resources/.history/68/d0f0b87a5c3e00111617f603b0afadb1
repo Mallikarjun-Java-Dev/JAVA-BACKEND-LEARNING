@@ -1,0 +1,74 @@
+package Stack_OP;
+
+import java.util.Scanner;
+
+public class Dynamic_stack {
+	int[] stack;
+	int top = -1;
+
+	Dynamic_stack(int size) {
+
+		stack = new int[size];
+	}
+
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		sb.append("Stack: [");
+		for (int i = 0; i <= top; i++) {
+			sb.append(stack[i]);
+			if (i < top) {
+				sb.append(", ");
+			}
+		}
+		sb.append("]");
+		return sb.toString();
+	}
+
+	public boolean isEmpty() {
+		return top == -1;
+	}
+
+	public boolean isFull() {
+		return top == stack.length - 1;
+	}
+
+	public void push(int value) {
+		if (isFull()) {
+			System.out.println("Stack is full");
+		} else {
+			stack[++top] = value;
+			System.out.println("data is inserted");
+		}
+	}
+
+	public void pop() {
+		if (isEmpty()) {
+			System.out.println("stack is empty");
+		} else {
+			int v = stack[top];
+			top--;
+			System.out.println("the value" + v + "is deleted");
+		}
+	}
+
+	public void peek() {
+		if (isEmpty()) {
+			System.out.println("the stack is empty");
+		} else {
+			System.out.println("the value is:" + stack[top]);
+		}
+	}
+
+	public void delete() {
+		stack = null;
+		System.out.println("Stack is deleted");
+	}
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the size of stack:");
+		int size = sc.nextInt();
+		Dynamic_stack s = new Dynamic_stack(size);
+
+	}
+}

@@ -1,0 +1,18 @@
+package springMVC1.config;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class AdminController {
+
+	@RequestMapping("/ia")
+	public void insertAdmin() {
+		System.err.println("data inserted successfully..");
+	}
+	@RequestMapping("/ad")
+	public void deleteAdmin() {
+		System.out.println("Admin deleted!!");
+	}
+	
+}

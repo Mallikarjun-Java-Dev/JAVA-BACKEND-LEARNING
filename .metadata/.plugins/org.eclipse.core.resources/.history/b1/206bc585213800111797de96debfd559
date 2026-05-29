@@ -1,0 +1,11 @@
+package DSA_HW;
+
+public class Map1 {
+
+	public static void main(String[] args) {
+		String str="hi hi how are are you you you java";
+		Map<String,Integer> map=new Map<String, Integer>();
+
+	}
+
+}

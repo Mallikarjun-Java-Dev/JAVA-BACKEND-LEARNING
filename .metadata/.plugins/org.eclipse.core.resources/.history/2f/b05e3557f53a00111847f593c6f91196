@@ -1,0 +1,5 @@
+package jdbcnew.jdbc;
+
+public class Student {
+
+}

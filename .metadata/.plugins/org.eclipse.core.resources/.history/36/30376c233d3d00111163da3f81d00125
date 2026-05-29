@@ -1,0 +1,15 @@
+package spring_DI3.abc;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component 
+
+public class Bus {
+@Autowired
+	Wheel W;
+
+	void test() {
+		W.assembly();
+	}
+}

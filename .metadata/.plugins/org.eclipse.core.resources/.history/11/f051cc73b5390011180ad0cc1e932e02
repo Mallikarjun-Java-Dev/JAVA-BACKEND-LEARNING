@@ -1,0 +1,14 @@
+package spring_ioc.a;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+public class RodJohnson {
+	public static void main(String[] args) {
+		//loading configuration file into container
+ApplicationContext applicationContext = new AnnotationConfigApplicationContext (MyConfig.c1);
+Spotify s1=applicationContext.getBean(Spotify.class);
+System.out.println(s1=s2);
+
+}
+}

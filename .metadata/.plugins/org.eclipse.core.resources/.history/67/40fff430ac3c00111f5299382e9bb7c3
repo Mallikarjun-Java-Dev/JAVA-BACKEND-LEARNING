@@ -1,0 +1,25 @@
+package SDA_ARRAY;
+
+public class SearchIndex {
+	String[] arr= {"hi","hello","how","how","you"};
+	
+	
+	public void searchValue(int index) {
+		for(int i=0; i<arr.length;i++) {
+		if(arr[index]!=null && arr[i]==arr[index]){
+			
+			System.out.println("the value present at index:"+arr[index]);
+		}
+		else {
+			System.out.println("cell is empty");
+		}
+		
+	}
+	}
+	
+	
+public static void main(String[] args) {
+	SearchIndex s=new SearchIndex();
+	s.searchValue(2);
+}
+}

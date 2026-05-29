@@ -1,0 +1,28 @@
+package spring_DI3.abc;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
+
+@Component 
+
+public class Bus {
+//@Autowired       //>>field injection
+//@Qualifier("mrfTyre")
+	Wheel W;
+
+//@Autowired	   //>>setter injection
+//public void setW(Wheel w) {
+//	W = w;
+//}
+// 
+Bus(@Qualifier("mrfTyre")Wheel w){
+	this.W=w;
+}
+
+
+
+	void test() {
+		W.assembly();
+	}
+}

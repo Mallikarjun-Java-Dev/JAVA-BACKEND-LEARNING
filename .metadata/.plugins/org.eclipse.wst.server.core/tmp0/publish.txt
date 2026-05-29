@@ -1,0 +1,4 @@
+#Tomcat publish data
+#Thu Apr 23 15:35:51 AFT 2026
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\Mallikarjun\ N\\.m2\\repository\\org\\springframework\\spring-web\\7.0.6\\spring-web-7.0.6.jar=WEB-INF/lib/spring-web-7.0.6.jar
+org.eclipse.jst.jee.server\:first=WEB-INF/lib/first.war

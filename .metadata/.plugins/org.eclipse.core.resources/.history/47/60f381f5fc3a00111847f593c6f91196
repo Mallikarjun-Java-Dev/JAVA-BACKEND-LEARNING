@@ -1,0 +1,49 @@
+package jdbcnew.jdbc;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.Statement;
+import java.util.Scanner;
+
+public class Student {
+	public static void main(String[] args) {
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+
+			// Connect to the database (make sure the database and table exist)
+			try (Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/jspiders2", "root", "root")) {
+				System.out.println("database connected");
+
+				// If you previously created the table with a wrong name/type, recreate it correctly if needed.
+				try (Statement s = c.createStatement()) {
+					s.executeUpdate("CREATE TABLE IF NOT EXISTS trainers (sid INT PRIMARY KEY, sname VARCHAR(40) NOT NULL, mobile BIGINT)");
+				}
+
+				try (Scanner sc = new Scanner(System.in)) {
+					System.out.println("enter id");
+					int sid = sc.nextInt();
+
+					System.out.println("enter name");
+					String sname1 = sc.next();
+
+					System.out.println("enter phone number");
+					long mobile = sc.nextLong();
+
+					String sql = "INSERT INTO trainers (sid, sname, mobile) VALUES (?, ?, ?)";
+					try (PreparedStatement p1 = c.prepareStatement(sql)) {
+						p1.setInt(1, sid);
+						p1.setString(2, sname1);
+						p1.setLong(3, mobile);
+						int rows = p1.executeUpdate();
+						System.out.println(rows + " row(s) inserted");
+					}
+				}
+			}
+
+		} catch (Exception e) {
+			System.err.println("Error: " + e.getMessage());
+			e.printStackTrace();
+		}
+	}
+}

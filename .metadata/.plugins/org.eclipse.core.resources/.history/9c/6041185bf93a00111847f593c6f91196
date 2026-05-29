@@ -1,0 +1,19 @@
+package jdbcnew.jdbc;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.Statement;
+
+public class Student {
+public static void main(String[] args) throws ClassNotFoundException, Exception {
+	Class.forName("com.mysql.cj.jdbc.Driver");
+Connection c=DriverManager.getConnection("jdbc:mysql://localhost:3306","root","root");
+Statement s=c.createStatement();
+	System.out.println("database connected");
+//	
+//	s.execute("create database jspiders");
+//System.out.println("database created");
+	s.execute("create table trainers(sid int primary key, sname varchar(40) not null, mobile long)");
+	System.out.println("table created");
+}
+}

@@ -1,0 +1,14 @@
+package springproject1.controller;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import controller.Car;
+
+public class Test_car {
+public static void main(String[] args) {
+	ApplicationContext AC=new AnnotationConfigApplicationContext(Myconfig.class);
+	Car c1=AC.getBean(Car.class);
+	c1.add();
+}
+}

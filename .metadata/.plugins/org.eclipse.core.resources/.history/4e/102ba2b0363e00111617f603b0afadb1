@@ -1,0 +1,55 @@
+package Stack_OP;
+
+public class Stack_opt {
+	int[] stack;
+	int topofStack = -1;
+
+	Stack_opt(int size) {
+		stack = new int[size];
+	}
+
+	public boolean isEmpty() {
+		return topofStack == -1;
+	}
+
+	public boolean isFull() {
+		return topofStack == stack.length - 1;
+	}
+
+	public void push(int value) {
+		if (isFull()) {
+			System.out.println("Stack is full");
+		} else {
+			stack[topofStack + 1] = value;
+		}
+	}
+
+	public void pop() {
+		if (isEmpty()) {
+			System.out.println("stack is empty");
+		} else {
+			int v = stack[topofStack];
+			topofStack--;
+			System.out.println("the value" + v + "is deleted");
+		}
+	}
+
+	public void peek() {
+		if (isEmpty()) {
+			System.out.println("the stack is empty");
+		} else {
+			System.out.println("the value is:" + stack[topofStack]);
+		}
+	}
+
+	public void delete() {
+		stack = null;
+		System.out.println("Stack is deleted");
+	}
+
+	public static void main(String[] args) {
+		Stack_opt s = new Stack_opt(5);
+//		s.isEmpty();
+		s.push(1);
+	}
+}

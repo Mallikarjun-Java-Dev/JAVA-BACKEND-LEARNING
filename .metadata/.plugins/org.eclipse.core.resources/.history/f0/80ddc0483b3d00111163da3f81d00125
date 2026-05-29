@@ -1,0 +1,17 @@
+package spring_DI3.abc;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class MrfTyre implements Wheel {
+
+	@Override
+	public void assembly() {
+		// TODO Auto-generated method stub
+		System.out.println("Adding MRF tyres...");
+	}
+
+	
+
+	
+}

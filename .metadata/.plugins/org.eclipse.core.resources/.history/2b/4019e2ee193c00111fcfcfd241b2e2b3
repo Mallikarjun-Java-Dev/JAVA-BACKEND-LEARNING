@@ -1,0 +1,35 @@
+package jdbc.connect;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.Scanner;
+
+public class CrtDtbase {
+public static void main(String[] args ) throws ClassNotFoundException, SQLException {
+	Class.forName("com.mysql.cj.jdbc.Driver");
+    Connection c=DriverManager.getConnection("jdbc:mysql://localhost:3306/Qspiders","root","root");
+    Statement s=c.createStatement();
+    System.out.println("database connected");
+    
+  //  s.execute("create database Qspiders");
+    System.out.println("database created");
+    
+  //  s.execute("create table jobs");
+//    s.execute("create table jobs(id int primary key, name varchar(40) not null, mobile long, loc varchar(40) )");
+//    System.out.println("table created");
+//    
+    Scanner sc=new Scanner(System.in);
+    
+    //insert
+  PreparedStatement p1=c.prepareStatement("insert into jobs values(?,?,?,?)");
+  System.out.println("enter id");
+  int id=sc.nextInt();
+  p1.setInt(1,id);
+  
+  
+  
+}
+}

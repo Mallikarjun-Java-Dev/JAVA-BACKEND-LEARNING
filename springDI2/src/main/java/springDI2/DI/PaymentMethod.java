@@ -1,0 +1,5 @@
+package springDI2.DI;
+
+public interface PaymentMethod {
+void pay();
+}

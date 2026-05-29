@@ -1,0 +1,5 @@
+package first.controller;
+@Webservlet("/ser")
+public class ServletP {
+
+}

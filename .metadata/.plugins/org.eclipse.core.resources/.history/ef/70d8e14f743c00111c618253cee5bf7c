@@ -1,0 +1,11 @@
+package springDI;
+
+public class Airtel implements Sim {
+
+
+@Override
+public void use() {
+	System.out.println("Airtel sim inserted...");
+	
+}
+}

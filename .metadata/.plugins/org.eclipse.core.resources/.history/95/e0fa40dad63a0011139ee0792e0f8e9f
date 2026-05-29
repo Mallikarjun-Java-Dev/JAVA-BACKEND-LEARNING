@@ -1,0 +1,14 @@
+package recursion;
+
+public class TentoOne {
+
+	static int print(int no) {
+		if(no) {
+			
+		}
+	}
+	public static void main(String[] args) {
+		
+	}
+
+}

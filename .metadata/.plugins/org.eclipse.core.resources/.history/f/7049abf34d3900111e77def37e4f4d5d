@@ -1,0 +1,7 @@
+package springproject1.controller;
+
+public class Engine {
+void insert() {
+	System.out.println("Engine added");
+}
+}

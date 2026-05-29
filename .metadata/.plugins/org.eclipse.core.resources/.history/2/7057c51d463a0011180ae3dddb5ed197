@@ -1,0 +1,24 @@
+package recursion;
+
+public class onetoTen {
+	static void print(int no) {
+		if(no<=10) {
+			System.out.println(no);
+			System.out.println(no+1);
+			//print(++no);
+		}
+	}
+	
+	static void tentoOne(int no) {
+		if(no>=10) {
+			System.out.println(no);
+			System.out.println(no+1);
+			print(no++);
+		}
+	}
+
+	public static void main(String[] args) {
+		print(1);
+	}
+
+}

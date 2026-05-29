@@ -1,0 +1,11 @@
+package spring_DI3.abc;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+public class Bus {
+@Autowired
+	Wheel W;
+	void test() {
+		
+	}
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>hello js</h1>
+
+
+<script type="">
+localStorage.setItem("username","Mallikarjun");
+localStorage.setItem("password","tim");
+localStorage.setItem("age","23");
+
+
+console.log(localStorage.getItem("username"));
+alert(localStorage.getItem("username"))
+
+localStorage.removeItem("username")
+localStorage.clear(); 
+
+
+
+</script>
+</body>
+</html>

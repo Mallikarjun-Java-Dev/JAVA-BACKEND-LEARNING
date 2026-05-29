@@ -1,0 +1,17 @@
+package spring_DI3.abc;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+
+
+@Configuration
+@ComponentScan(basePackages = "spring_DI3.abc")
+public class Bus {
+@Autowired
+	Wheel W;
+
+	void test() {
+		W.assembly();
+	}
+}

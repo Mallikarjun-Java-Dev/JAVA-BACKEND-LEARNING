@@ -1,0 +1,31 @@
+package config;
+
+import org.jspecify.annotations.Nullable;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
+
+@Controller
+public class MyWebAppConfig extends AbstractAnnotationConfigDispatcherServletInitializer {
+
+	@Override
+	protected Class<?> @Nullable [] getRootConfigClasses() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	protected Class<?> @Nullable [] getServletConfigClasses() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@RequestMapping
+	@Override
+	protected String[] getServletMappings() { // used to specify the url pattern for the servlet and it is used to map
+												// the servlet to a specific url pattern
+
+		return new String[] { "/" };
+	}
+
+}

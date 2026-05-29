@@ -1,0 +1,23 @@
+
+
+public class Snippet {
+	public static void search(int a[], int search) {
+		int low=0, high=a.length-1;
+		
+		while(low<=high) {
+			int mid=(low+high)/2;
+		if(a[mid]==search) {
+			System.out.println("the value is present at index:"+mid);
+			return;
+		}
+		if(search<a[mid]) {
+			high=mid-1;
+		}
+		else {
+			low=mid+1;
+		}
+		}
+		System.out.println("value is not present!");
+		
+	}
+}

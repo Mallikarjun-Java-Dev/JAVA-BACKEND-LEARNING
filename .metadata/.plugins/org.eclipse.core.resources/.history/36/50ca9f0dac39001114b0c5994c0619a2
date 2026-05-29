@@ -1,0 +1,16 @@
+package springproject1.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import springproject1.controller.Engine;
+
+@Component
+public class Car {
+	@Autowired
+Engine e1;
+
+void add() {
+e1.insert();
+}
+}

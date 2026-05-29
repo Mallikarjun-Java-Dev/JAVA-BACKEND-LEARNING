@@ -1,0 +1,22 @@
+package jdbcLast.jdbc;
+
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class EmployeeNew {
+	public static void main(String[] args) throws ClassNotFoundException, SQLException {
+		
+	
+Class.forName("com.mysql.cj.jdbc.Driver");
+ Connection c=DriverManager.getConnection("jdbc:mysql://Localhost:3306","root","root");
+  Statement s=c.createStatement();
+//  s.execute("create database empdb");
+//  System.out.println("database created");
+ 
+s.execute("create table emp_det(id int primary key, name varchar(40) not null, salary double)");
+System.out.println("table created");
+
+}}

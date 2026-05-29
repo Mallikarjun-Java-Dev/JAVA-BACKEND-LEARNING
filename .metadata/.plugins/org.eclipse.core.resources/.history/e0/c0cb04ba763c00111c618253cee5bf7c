@@ -1,0 +1,9 @@
+package springDI;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+public class MobileTest {
+ApplicationContext context=new AnnotationConfigApplicationContext(Myconfig.class);
+
+}
